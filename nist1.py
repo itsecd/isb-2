@@ -3,7 +3,7 @@ from scipy.special import erfc
 
 
 def main():
-    bits = 1
+    bits = '00000000000000000000000000000000000000000000000000000000000000000000000111000010011010110000111110010111000100100110100011100011'
     # вычисляем количество единиц и нулей в последовательности
     ones = bits.count('1')
     zeros = bits.count('0')
@@ -14,10 +14,10 @@ def main():
     P = erfc(S / sqrt(2))
     # проверяем гипотезу на уровне значимости 0.01
     if P < 0.01:
-        return "Failed  test"
+        print("Failed  test")
     else:
-        return "Passed  test"
+        print( "Passed  test")
 
-
+#passed test
 if __name__ == "__main__":
     main()
