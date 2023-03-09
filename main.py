@@ -31,3 +31,22 @@ with open("GPSHC.txt", mode='r', encoding='UTF-8') as text:
     print(S1)
     P1 = math.erfc(S1/math.sqrt(2))
     print(P1) #P1 = 0.1572992070502852
+    # Тест на одинаковые подряд идущие биты.
+    S2 = (1 / 128) * sum(lisT2)
+    print(S2)
+    if abs(S2 - 0.5) < 2 / math.sqrt(128):
+        print("Go next!")
+    else:
+        print("Oh no")
+    ri = []
+    for i in range(len(lisT2) - 1):
+        if lisT2[i] == lisT2[i + 1]:
+            ri.append(0)
+        else:
+            ri.append(1)
+    print(ri)
+    Vn = sum(ri)
+    print(Vn)
+    P2 = math.erfc((abs(Vn - 2 * 128 * S2 * (1 - S2))) / (2 * math.sqrt(2 * 128) * S2 * (1 - S2)))
+    print(P2)  # P2 = 0.4375
+
