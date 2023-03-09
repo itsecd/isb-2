@@ -21,3 +21,13 @@ with open("GPSHC.txt", mode='r', encoding='UTF-8') as text:
     lisT = list(map(int, lisT))
     lisT2 = list(map(int, lisT))
     print(lisT2)
+    # Частотный побитовый тест.
+    for i in range(len(lisT)):
+        if lisT[i] == 0:
+            lisT[i] = -1
+    print(lisT)
+    print(sum(lisT))
+    S1 = (-1/math.sqrt(128))*sum(lisT)
+    print(S1)
+    P1 = math.erfc(S1/math.sqrt(2))
+    print(P1) #P1 = 0.1572992070502852
