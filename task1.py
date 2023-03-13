@@ -14,4 +14,4 @@ for elem in sequence:
 s_n = ratio * sum_elem
 p = math.erfc(s_n / math.sqrt(2))
 print("P =", p)
-# 0.8596837951986662
+# P = 0.8596837951986662

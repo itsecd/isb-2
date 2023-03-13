@@ -25,4 +25,4 @@ for i in range(0, 127):
 p = math.erfc(abs(v - 2 * n * one * (1 - one)) /
               (2 * math.sqrt(2 * n) * one * (1 - one)))
 print("P =", p)
-# 0.8618206240105855
+# P = 0.8618206240105855
